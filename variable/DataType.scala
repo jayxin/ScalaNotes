@@ -33,16 +33,16 @@ object DataType {
 
 /*Any
   AnyVal
-    Double
+    Double(8B)
     Unit
-    Float
-    Long
-    Int
-    Short
+    Float(4B)
+    Long(8B)
+    Int(4B)
+    Short(2B)
     Boolean
-    Char
+    Char(2B)
     String
-    Byte
+    Byte(1B)
       Nothing
   AnyRef
     Scala collections
@@ -50,3 +50,8 @@ object DataType {
     (all java classes)
       Null
         Nothing*/
+
+/*
+Int IFF scala.Int
+Scala 用 java.lang.String 类来表示字符串
+*/

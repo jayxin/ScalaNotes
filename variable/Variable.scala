@@ -1,4 +1,9 @@
 object Variable {
+  /*
+   * Scala有两种类型的变量:
+   * val: 是不可变的, 在声明时就必须被初始化, 初始化以后就不能再赋值
+   * var: 是可变的, 声明的时候需要进行初始化, 初始化以后还可再次对其赋值
+   */
   def main(args : Array[String]) : Unit = {
     var a : Int = 1
     var b : Int = 3

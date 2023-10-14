@@ -5,5 +5,11 @@ object WhileDemo {
       println(i)
       i += 1
     }
+
+    i = 0
+    do {
+      println(i)
+      i += 1
+    } while (i < 5)
   }
 }

@@ -8,5 +8,8 @@ object If_Demo {
     if (age > 18) {
       println("age > 18")
     }
+
+    val x = 6
+    val a = if (x > 0) 1 else -1
   }
 }

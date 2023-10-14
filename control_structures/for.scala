@@ -2,6 +2,7 @@ object For_Demo {
   def main(args : Array[String]) : Unit = {
     val startP = 1
     val endP = 3
+    // 变量 <- 表达式 被称为生成器(generator)
     for (i <- startP to endP) {
       print(s"${i} ")
     } // 1 2 3
@@ -12,6 +13,9 @@ object For_Demo {
     } // 1 2
     println()
 
+    for (i <- 1 to 5 by 2)
+      println(i)
+
     var list = List("hello", 10, 30, "Tom")
     for (item <- list) {
       println(s"item = ${item}")
@@ -21,6 +25,11 @@ object For_Demo {
 
     nestedFor()
 
+    /*
+     * for推导式: for结构可以在每次执行的时候创造一个值,
+然后将包含了所有产生值的集合作为for循环表达式的结果返回,
+集合的类型由生成器中的集合类型确定
+     */
     val res = for (i <- 1 to 10) yield i;
     println(res)
     // Vector(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -37,6 +46,7 @@ object For_Demo {
   }
 
   def forGuard() : Unit = {
+    // 过滤出一些满足条件的结果
     for (i <- 1 to 3 if i != 2) {
       print(s"${i} ")
     } // 1 3

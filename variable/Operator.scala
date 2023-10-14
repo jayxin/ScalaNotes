@@ -40,5 +40,19 @@ object Operator {
     a = a - b
 
     val num = if (a > b) a else b
+
+    val sum1 = 5 + 3
+    val sum2 = (5).+(3)
+    println(sum1, sum2)
   }
 }
+
+/*
+ * 对基本数据类型, 除以上提到的各种操作符外, Scala还提供了许多常用运算的方法,
+只是这些方法不是在基本类里面定义, 而是被封装到一个对应的富包装类中.
+ * 每个基本类型都有一个对应的富包装类, 如 Int 有一个 RichInt 类、
+String有一个 RichString 类, 这些类位于包scala.runtime中
+ * 当对一个基本数据类型的对象调用其富包装类提供的方法,
+Scala会自动通过隐式转换将该对象转换为对应的富包装类型, 然后再调用相应的方法.
+如: 3 max 5
+ */
